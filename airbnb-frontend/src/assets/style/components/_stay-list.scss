@@ -1,0 +1,22 @@
+.list-container {
+    .stay-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        grid-auto-flow: dense;
+    }
+    .city-name {
+        font-size: rem(32px);
+        line-height: rem(32px);
+        margin: 30px 0;
+    }
+    .count-stays {
+        margin-block-start: rem(111px);
+        @include for-mobile-layout {
+            margin-block-start: 1rem;
+        }
+    }
+    .list-loader {
+        margin-top: 150px;
+    }
+}

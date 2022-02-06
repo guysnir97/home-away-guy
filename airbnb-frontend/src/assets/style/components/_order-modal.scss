@@ -1,0 +1,112 @@
+.order-modal {
+    flex-shrink: 1;
+    margin-bottom: 20px;
+    height: 100%;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: rem(100px);
+    z-index: 10;
+    margin-left: rem(20px);
+    background-color: #fff;
+    width: 371px;
+    gap: 5px;
+    font-size: rem(12px);
+    border: 1px solid #dadada;
+    border-radius: 13px;
+    box-shadow: 0 6px 16px -2px #d8d8d8;
+    padding: 20px 25px 15px;
+    > * {
+        color: $clr2;
+    }
+  
+    .confirm-guests {
+        text-align: left;
+        background-color: #fff;
+        border: none;
+        line-height: 22px;
+        padding: inherit;
+    }
+    input {
+        background-color: #fff;
+        width: 100%;
+        border: none;
+        padding: initial;
+        color: $clr1;
+    }
+    .rating-container {
+        width: rem(113px);
+        display: flex;
+        justify-content: space-between;
+        .rating {
+            text-decoration-line: underline;
+        }
+    }
+    .price {
+        font-size: rem(22px);
+    }
+
+    .input-container {
+        margin-top: 15px;
+        &.focus {
+            border-radius: 0 8px 0 0;
+            .check-in {
+                border: 1px solid black;
+                border-right-color: #dad0d0;
+            }
+            .check-out {
+                border: 1px solid black;
+                border-left-color: #dad0d0;
+            }
+        }
+
+        .check-in {
+            line-height: 18px;
+            border: 1px solid #dad0d0;
+            border-radius: 8px 0 0 0;
+            border-bottom: none;
+            padding: 12px 12px 10px;
+        }
+        .check-out {
+            line-height: 18px;
+            border: 1px solid #dad0d0;
+            border-radius: 0 8px 0 0;
+            border-left: none;
+            border-bottom: none;
+            padding: 12px 12px 10px;
+        }
+    }
+
+    .guests {
+        padding: 12px 36px 10px 12px;
+        color: $clr2;
+        border: 1px solid #dad0d0;
+        border-radius: 0 0 8px 8px;
+        margin-bottom: 20px;
+        &.focus {
+            border: 2px solid black;
+        }
+    }
+
+    .confirm-order {
+        height: 45px;
+
+        border-radius: 8px;
+        border: none;
+        color: $clr4;
+        background-image: radial-gradient(
+            circle at center,
+            #ff385c 0%,
+            #e61e4d 27.5%,
+            #e31c5f 40%,
+            #d70466 57.5%,
+            #bd1e59 75%,
+            #bd1e59 100%
+        );
+        background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+        background-size: 150% 150%;
+        & span:hover {
+            text-decoration: underline;
+        }
+    }
+}

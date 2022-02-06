@@ -1,0 +1,44 @@
+// Setup
+@import "setup/variables";
+@import "setup/mixins";
+@import "setup/functions";
+@import "setup/typography";
+
+// Basics
+
+@import "basics/layout";
+@import "basics/base";
+@import "basics/helpers";
+
+// Pages
+@import "pages/home-page";
+@import "pages/stay-details.scss";
+@import "pages/trip-page.scss";
+@import "pages/host-page.scss";
+
+// Components
+@import "components/app-header.scss";
+@import "components/app-footer.scss";
+@import "components/stay-perview.scss";
+@import "components/search-bar.scss";
+@import "components/guests-picking.scss";
+@import "components/slider-img";
+@import "components/order-modal";
+@import "components/reviews";
+@import "components/stay-list";
+@import "components/order-msg";
+@import "components/host-list";
+@import "components/login";
+@import "components/mobile-search-bar";
+@import "components/stay-filter";
+@import "components/host-list.scss";
+@import "components/final-price.scss";
+@import "components/add-stay.scss";
+@import "components/rate-host";
+@import "components/mobile-nav-bar.scss";
+@import "components/multiple-rows.scss";
+// @import "components/react-dates.scss";
+
+// @import 'cmps/user-msg';
+
+// Components

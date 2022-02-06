@@ -1,0 +1,85 @@
+.trip-container {
+    @include for-mobile-layout {
+        margin-bottom: 80px;
+    }
+    .trip-hero {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        border-radius: 13px 13px 0px 0px;
+    }
+    .trip-img {
+        width: rem(380px);
+        height: rem(150px);
+        @include for-mobile-layout {
+            width: 100%;
+        }
+    }
+    .trip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-bottom: 20px;
+    }
+    .trip-details {
+        padding: 10px 20px;
+    }
+    .trip-preview {
+        box-shadow: 0 6px 16px 2px #d8d8d8;
+        @include for-mobile-layout {
+            width: 100%;
+            margin-right: 20px;
+        }
+    }
+    .txt-trip {
+        margin-top: 124px;
+        margin-bottom: 13px;
+        @include for-mobile-layout {
+            margin-top: 70px;
+        }
+    }
+    .btn-menu {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(131, 126, 126, 0.5);
+        width: inherit;
+        .btn-trip {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            &.active {
+                border-radius: initial;
+                border-bottom: 1px solid black;
+            }
+            &:hover {
+                transition: 0.4s;
+                background-color: #f1f1f1;
+            }
+        }
+    }
+    &:last-child {
+        margin-inline-start: 20px;
+    }
+    .update-trip {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .btn-trip {
+            border-radius: 30px;
+            cursor: pointer;
+            color: #222222;
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            background-color: #fff;
+            border: 1px solid #b0b0b0;
+            text-align: center;
+            &:hover {
+                background-color: $clr6;
+                transition: 0.4s;
+                outline: 1px solid $clr2;
+            }
+        }
+    }
+}

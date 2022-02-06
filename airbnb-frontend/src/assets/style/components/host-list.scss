@@ -1,0 +1,147 @@
+.host-list {
+    font-size: 16px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 100%;
+    @include for-mobile-layout {
+        font-size: 12px;
+    }
+    thead {
+        .sort {
+            cursor: pointer;
+            &:hover {
+                color: $clr2;
+            }
+            &.black {
+                color: $clr2;
+            }
+        }
+        th {
+            color: $clr1;
+            font-size: em(14px);
+            line-height: em(16px);
+            font-family: airbnb-cereal-bold;
+            color: #717171;
+            text-transform: uppercase;
+            background: #ffffff;
+            text-align: left;
+            @include for-mobile-layout {
+                padding: 3px 6px;
+                white-space: normal;
+                line-height: 20px;
+                text-align: center;
+            }
+            @include for-narrow-layout {
+                white-space: normal;
+                line-height: 18px;
+                padding-left: 5px;
+                font-size: 12px;
+            }
+            @include for-wide-layout {
+                text-align: left;
+                padding: 8px 16px;
+                white-space: nowrap;
+            }
+        }
+    }
+    tbody {
+        .buyer {
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                @include for-mobile-layout {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        .action {
+            button {
+                padding: 10px;
+                width: 100px;
+                border: none;
+                border-radius: 4px;
+                background-color: $clr3;
+                color: #fff;
+                @include for-mobile-layout {
+                    width: 60px;
+                    line-height: em(18px);
+                    padding: 2px;
+                }
+            }
+        }
+        .action-edit {
+            button {
+                padding: 10px;
+                width: 65px;
+                border: none;
+                border-radius: 4px;
+                background-color: $clr3;
+                color: #fff;
+                @include for-mobile-layout {
+                    padding: 5px;
+                    line-height: em(18px);
+                }
+            }
+        }
+        tr {
+            border-bottom: 1px solid #ebebeb;
+            border-top: 1px solid #f7f7f7;
+            background: #f7f7f7;
+            box-shadow: #ffffff 0px -3px 0;
+            td {
+                font-size: em(14px);
+                @include for-mobile-layout {
+                    line-height: 12px;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 3px 8px;
+                    &:first-child {
+                        display: block;
+                    }
+                }
+                @include for-narrow-layout {
+                    padding: 0px 6px;
+                }
+                @include for-wide-layout {
+                    text-align: left;
+                    padding: 25px 16px;
+                }
+                img {
+                    min-width: 3rem;
+                    max-width: 10rem;
+                    height: 5rem;
+                }
+            }
+            @include for-mobile-layout {
+                &:first-child {
+                    align-items: center;
+                }
+                img {
+                    width: 80px;
+                    border-radius: 4px;
+                    object-fit: cover;
+                }
+                &:nth-child(2) {
+                    color: #484848;
+                }
+            }
+        }
+    }
+    @include for-mobile-layout {
+        line-height: 10px;
+    }
+}
+
+.orders-blank {
+    height: 100px;
+}
+
+.order-table {
+    box-shadow: 0 6px 16px -2px #d8d8d8;
+    @include for-mobile-layout {
+        position: absolute;
+        left: -7px;
+    }
+}

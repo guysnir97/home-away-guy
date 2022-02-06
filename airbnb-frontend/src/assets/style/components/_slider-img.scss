@@ -1,0 +1,52 @@
+.slider-img{
+    position: a;
+    cursor: pointer;
+    &:hover{
+        .slick-prev{
+            opacity: 1;
+        }
+        .slick-next{
+            opacity: 1;
+        }
+    }
+
+    .slick-prev{
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        opacity: 0;
+    }
+    .slick-next{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        opacity: 0;    
+        margin-right: 10px;
+    }
+    .slick-next::before{
+        opacity: 1 !important;
+        font-size: 25px;
+        right: 0;
+    }
+   
+    .slick-prev::before{
+        font-size: 25px;
+        margin-left: 6px;
+        opacity: 1 !important;
+    }
+
+    .slick-slider{
+        position: relative;
+        margin-bottom: 8px;         
+    }
+}
+
+.slick-dots{
+    bottom: 0 !important;
+        li{
+            margin: 0 !important;
+            button::before{
+                color: white !important;     
+            }
+        }
+}

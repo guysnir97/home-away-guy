@@ -1,0 +1,170 @@
+.host-page {
+    margin-top: 54px;
+    margin-bottom: 54px;
+    @include for-mobile-layout {
+        margin-top: 70px;
+    }
+    .host-container {
+        position: relative;
+        .stay-details-container {
+            margin-top: 35px;
+            box-shadow: 0 6px 16px -2px #d8d8d8;
+            @include for-mobile-layout {
+                top: -50px;
+                position: relative;
+                margin: unset;
+                padding: unset;
+            }
+        }
+    }
+    .side-nav {
+        button {
+            padding: 17px;
+        }
+        @include for-mobile-layout {
+            white-space: nowrap;
+            gap: 20px;
+            button {
+                padding: 0px;
+            }
+        }
+        @include for-normal-layout {
+            gap: 20px;
+        }
+    }
+    .nav-bar {
+        z-index: 30;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        .btn-nav {
+            border-radius: 2em;
+            border: none;
+            background: inherit;
+            &:hover {
+                transition: 0.4s;
+                background-color: #f1f1f1;
+            }
+        }
+        @include for-mobile-layout {
+            top: -55px;
+        }
+    }
+    .active {
+        span {
+            text-decoration: underline;
+        }
+    }
+    .cards-container {
+        margin-bottom: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        display: grid;
+        gap: 10px;
+        grid-gap: 50px 0px;
+        @include for-wide-layout {
+            display: flex;
+        }
+        @include for-mobile-layout {
+            margin-bottom: 80px;
+        }
+        .card-container {
+            border-radius: 5px;
+            box-shadow: 0 6px 16px -2px #d8d8d8;
+            position: relative;
+            padding: 8px 5px;
+            height: rem(150px);
+            @include for-mobile-layout {
+                width: 100%;
+                padding: 5px;
+                & .txt {
+                    padding-left: 105px;
+                }
+            }
+            .img {
+                width: 3rem;
+            }
+            @include for-wide-layout {
+                width: rem(350px);
+                display: block;
+                padding: 10px 20px;
+            }
+        }
+        &> :nth-child(1) {
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+        &> :nth-child(3) {
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+        .icon-container {
+            height: rem(60px);
+            width: rem(60px);
+            position: absolute;
+            top: -17px;
+            left: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 3px;
+            color: white;
+            &.star {
+                background: linear-gradient(60deg, #ffa726, #fb8c00);
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+            }
+            &.dollar {
+                background: linear-gradient(60deg, #66bb6a, #43a047);
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4);
+            }
+            &.info {
+                background: linear-gradient(60deg, #26c6da, #00acc1);
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 172, 193, 0.4);
+            }
+            &.guests {
+                background: linear-gradient(60deg, #6b0d34, #6e0b29);
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(231, 36, 62, 0.4);
+            }
+        }
+        .star-red {
+            color: $clr3;
+            @include for-mobile-layout {
+                height: rem(10px);
+                width: rem(10px);
+            }
+        }
+        h1 {
+            @include for-mobile-layout {
+                text-align: center;
+            }
+        }
+        .status-info {
+            text-align: center;
+            @include for-mobile-layout {
+                justify-content: center;
+                padding-bottom: 5px;
+            }
+        }
+        .bcg {
+            padding: 3px 7px;
+            border-radius: 5px;
+            @include for-mobile-layout {
+                padding: 8px 11px;
+            }
+        }
+        .green {
+            background: linear-gradient(to right, rgba(95, 227, 143, 0.55), rgba(164, 255, 207, 0.55));
+        }
+        .yellow {
+            background: linear-gradient(to right, rgba(246, 211, 101, 0.5), rgba(253, 160, 133, 0.5));
+        }
+        .red {
+            background: linear-gradient(to right, rgba(237, 80, 150, 0.55), rgba(251, 4, 37, 0.55));
+        }
+    }
+    &.mrg-btn {
+        margin-bottom: 250px;
+    }
+    &.host-height {
+        height: 50vh;
+    }
+}

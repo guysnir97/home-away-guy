@@ -1,0 +1,176 @@
+.hero-logo {
+    margin-block-end: 2.5rem;
+    max-height: 86vh;
+    .btn-flex-container {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 0%);
+        line-height: 60px;
+        .btn-flex {
+            padding: 22px 56px;
+            text-align: center;
+            text-decoration: none;
+            border-color: black;
+            width: auto;
+            background: lightgrey;
+            color: black;
+            touch-action: manipulation;
+            font-family: airbnb-cereal-bold;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 600;
+            border-radius: 54px;
+            border-width: 1px;
+            transition: box-shadow 0.2s ease-out, -ms-transform 0.2s ease-out, -webkit-transform 0.2s ease-out, transform 0.2s ease-out;
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+            background-color: #ffffff;
+            & span {
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background: linear-gradient(90deg, #6f019c 0%, #c6017e 135.12%);
+            }
+            &:hover {
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.24);
+            }
+        }
+    }
+}
+
+.home-page {
+    .title-popular {
+        margin-block-end: rem(30px);
+    }
+    .popular-img-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: rem(20px);
+        margin-block-end: rem(70px);
+        @include for-mobile-layout {
+            column-gap: 35px;
+        }
+        .stay-container {
+            margin-inline-start: 0.625rem;
+        }
+        .popular-img {
+            max-width: 4rem;
+            max-height: 4rem;
+            cursor: pointer;
+        }
+        .popular-txt {
+            margin-inline-start: rem(10px);
+            line-height: rem(24px);
+            @include for-mobile-layout {
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+            }
+            .country {
+                font-weight: 500;
+            }
+        }
+    }
+    @include for-mobile-layout {
+        .popular-list {
+            gap: 10px;
+            & .popular-txt {
+                gap: 5px;
+            }
+        }
+    }
+    .labels-img-list {
+        display: grid;
+        gap: rem(10px);
+        grid-template-columns: repeat(4, 1fr);
+        margin-block-start: rem(30px);
+        @include for-mobile-layout {
+            margin-bottom: 100px;
+        }
+        .label-txt {
+            padding-block-start: rem(10px);
+            font-size: rem(18px);
+        }
+    }
+    .title-label {
+        font-size: 1.875rem;
+    }
+    .host-container {
+        margin-block-start: rem(75px);
+        margin-block-end: rem(40px);
+        color: white;
+        position: relative;
+        display: block;
+        @include for-mobile-layout {
+            bottom: 50px;
+            height: 450px;
+            img {
+                object-position: -516px 136px;
+            }
+        }
+        .host-info {
+            height: 100%;
+            padding: 0px 80px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            @include for-mobile-layout {
+                width: 100%;
+                padding: 5px;
+                height: initial;
+                background: $clr2;
+                text-align: center;
+                border-radius: 10px 10px 0px 0px;
+            }
+            .info-first {
+                font-size: rem(48px);
+                line-height: 4.875rem;
+                @include for-mobile-layout {
+                    font-size: 2rem;
+                    line-height: 2.875rem;
+                }
+            }
+            .info-seconde {
+                line-height: rem(15px);
+                @include for-mobile-layout {
+                    max-width: 37ch;
+                    line-height: 20px;
+                }
+            }
+        }
+        .host-btn {
+            display: block;
+            padding: rem(14px) rem(24px);
+            align-self: flex-start;
+            font-weight: 700;
+            @include for-mobile-layout {
+                align-self: unset;
+            }
+        }
+    }
+    @include for-mobile-layout {
+        .slick-slider {
+            width: 586px;
+            height: 140px;
+            padding-inline-start: 10px;
+        }
+        .slick-slide {
+            >div {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                &>div {
+                    width: 100% !important;
+                }
+            }
+        }
+        & .pad-home {
+            padding: 0px 10px;
+            margin-top: 10px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
